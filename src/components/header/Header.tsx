@@ -3,6 +3,7 @@ import portfolioLogo from '../../assets/portfolio-img.png'
 import { MENU_ITEMS } from '../../utils/constants'
 import HeaderMenu from './HeaderMenu'
 import HeaderSocial from './HeaderSocial'
+import { Link } from 'react-router'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,13 +45,13 @@ const Header = () => {
           <ul className="flex flex-col pl-6 items-center gap-2 text-lg font-medium">
             {MENU_ITEMS.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   onClick={() => setIsOpen(false)}
                   className="animated-underline"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
