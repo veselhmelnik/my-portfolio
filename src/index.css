@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #EBE5DC;
+  font-family: "Lora", serif;
+}
+
+input, textarea {
+  border: dashed;
+  border-width: 0.1rem;
+  border-color: #686868;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-family: sans-serif;
+}
