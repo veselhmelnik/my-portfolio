@@ -2,6 +2,7 @@ import { CONTACT_ITEMS } from '../utils/constants'
 import { useForm } from 'react-hook-form'
 import { contactSchema, type ContactFormData } from '../utils/contactForm'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
 
 const ContactsPage = () => {
   return (
@@ -40,8 +41,9 @@ const ContactsPage = () => {
     </div>
   )
 }
-
+type SubmitStatus = 'idle' | 'success' | 'error'
 const ContactForm = () => {
+  const [status, setStatus] = useState<SubmitStatus>('idle')
   const {
     register,
     handleSubmit,
@@ -49,6 +51,7 @@ const ContactForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) })
   const onSubmit = async (data: ContactFormData) => {
+    setStatus('idle')
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -57,12 +60,18 @@ const ContactForm = () => {
         },
         body: JSON.stringify(data),
       })
+       const result = await res.json()
+
+    console.log("STATUS:", res.status)
+    console.log("RESULT:", result)
       if (!res.ok) {
         throw new Error('Failed to send message')
       }
+      setStatus('success')
       reset()
     } catch (e) {
       console.log(e)
+      setStatus('error')
     }
   }
   return (
@@ -133,6 +142,17 @@ const ContactForm = () => {
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
+      {status === 'success' && (
+        <p className="text-center text-green-700 font-sans">
+          Message sent successfully. Thank you!
+        </p>
+      )}
+
+      {status === 'error' && (
+        <p className="text-center text-red-600 font-sans">
+          Something went wrong. Please try again.
+        </p>
+      )}
     </form>
   )
 }

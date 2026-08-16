@@ -1,6 +1,7 @@
 import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
@@ -46,12 +47,17 @@ export async function POST(request: Request) {
 
     console.log("Email sent:", data)
 
-    return Response.json({
-      success: true,
-      message: "Email sent successfully",
-    })
+    return Response.json(
+      {
+        success: true,
+        message: "Email sent successfully",
+      },
+      {
+        status: 200,
+      }
+    )
   } catch (error) {
-    console.error(error)
+    console.error("Server error:", error)
 
     return Response.json(
       {
