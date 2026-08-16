@@ -60,10 +60,6 @@ const ContactForm = () => {
         },
         body: JSON.stringify(data),
       })
-       const result = await res.json()
-
-    console.log("STATUS:", res.status)
-    console.log("RESULT:", result)
       if (!res.ok) {
         throw new Error('Failed to send message')
       }
@@ -143,13 +139,13 @@ const ContactForm = () => {
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
       {status === 'success' && (
-        <p className="text-center text-green-700 font-sans">
+        <p className="text-center text-green-700 font-sans animate-fade-in">
           Message sent successfully. Thank you!
         </p>
       )}
 
       {status === 'error' && (
-        <p className="text-center text-red-600 font-sans">
+        <p className="text-center text-red-600 font-sans animate-fade-in">
           Something went wrong. Please try again.
         </p>
       )}
