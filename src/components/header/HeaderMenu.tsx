@@ -1,5 +1,6 @@
 import React from 'react'
 import { MENU_ITEMS } from '../../utils/constants'
+import { Link } from 'react-router'
 
 type HeaderMenuProps = {
   isOpen: boolean
@@ -15,12 +16,12 @@ const HeaderMenu = ({
       <ul className="hidden md:flex gap-8 font-medium text-lg text-gray-800">
         {MENU_ITEMS.map((item) => (
           <li key={item.name}>
-            <a
-              href={item.link}
+            <Link
+              to={item.link}
               className="animated-underline"
             >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
