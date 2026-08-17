@@ -3,8 +3,10 @@ import { useForm } from 'react-hook-form'
 import { contactSchema, type ContactFormData } from '../utils/contactForm'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
+import { useDocumentTitle } from '../utils/useDocumentTitle'
 
 const ContactsPage = () => {
+  useDocumentTitle("Contacts | Nikita Domitrak")
   return (
     <div className="flex flex-col gap-10 justify-center items-center text-center">
       <h2 className="text-center text-6xl font-semibold">Get In Touch</h2>

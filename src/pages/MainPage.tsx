@@ -6,8 +6,10 @@ import CarouselSection from '../components/CarouselSection'
 import ExperienceSection from '../components/ExperienceSection'
 import CustomButton from '../components/CustomButton'
 import { LINKS } from '../utils/constants'
+import { useDocumentTitle } from '../utils/useDocumentTitle'
 
 const MainPage = () => {
+  useDocumentTitle("Home | Nikita Domitrak")
   return (
     <div className="flex flex-col gap-15">
       <AboutSection />

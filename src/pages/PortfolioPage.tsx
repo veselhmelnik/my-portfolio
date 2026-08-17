@@ -2,8 +2,10 @@ import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import WorkSection from '../components/WorkSection'
 import { AREA_ARRAY } from '../utils/constants'
+import { useDocumentTitle } from '../utils/useDocumentTitle'
 
 const PortfolioPage = () => {
+  useDocumentTitle("Portfolio | Nikita Domitrak")
   const [area, setArea] = useState('')
   const toggleArea = (area: string) => {
     setArea(area)
