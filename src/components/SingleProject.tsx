@@ -35,6 +35,7 @@ const SingleProject = () => {
           githubFront={project.githubFront}
           githubBack={project.githubBack}
           demo={project.demo}
+          privateProject={project.privateProject}
         />
       </div>
       <div className="flex justify-between gap-5">
@@ -65,6 +66,7 @@ type ProjectInfoProps = {
   github?: string 
   githubFront?: string
   githubBack?: string
+  privateProject?: boolean
 }
 
 const ProjectInfo = ({
@@ -74,6 +76,7 @@ const ProjectInfo = ({
   github,
   githubFront,
   githubBack,
+  privateProject
 }: ProjectInfoProps) => {
   return (
     <div
@@ -81,7 +84,7 @@ const ProjectInfo = ({
     >
       <div className="font-semibold text-lg">{label}:</div>
 
-      <div className="mt-1 text-[#525456]">
+      {privateProject ? <div className='text-red-700 font-semibold'>Private Project</div> : <div className="mt-1 text-[#525456]">
         {label === 'Project' ? (
           <div>
             {' '}
@@ -132,7 +135,7 @@ const ProjectInfo = ({
         ) : (
           value
         )}
-      </div>
+      </div>}
     </div>
   )
 }

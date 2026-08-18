@@ -14,7 +14,7 @@ const MainPage = () => {
     <div className="flex flex-col gap-15">
       <AboutSection />
       <Reveal>
-        <WorkSection area={'front'} />
+        <WorkSection area={'front'} preview />
         <div className="flex justify-center mt-12">
           <CustomButton to={LINKS.portfolio}>View All Works</CustomButton>
         </div>

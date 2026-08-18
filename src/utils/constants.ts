@@ -72,7 +72,7 @@ export const SOCIAL_ITEMS = [
 export const ABOUT_ITEMS = [
     {
         title: 'Real-World Projects',
-        count: '3+'
+        count: '4+'
     },
     {
         title: 'Focus Areas',
@@ -140,6 +140,7 @@ export const WORK_ITEMS = [
         solution:
             'I designed a modular full-stack system with automatic material calculation, inventory tracking, reporting and production planning tools. The application centralizes production workflows and reduces manual calculation errors.',
         hasImages: true,
+        privateProject: true,
         images: [
             '/projects/ammunition/ammunition-preview.png',
             '/projects/ammunition/ammunition-table.png',
@@ -147,6 +148,37 @@ export const WORK_ITEMS = [
             '/projects/ammunition/ammunition-ammo.png',
             '/projects/ammunition/ammunition-calendar.png',
             '/projects/ammunition/ammunition-order.png',
+        ],
+    },
+    {
+        id: 6,
+        area: 'front',
+        slug: 'personnel-management-system',
+        title: 'Personnel Management System',
+
+        frontend:
+            'React 18, TypeScript, Material UI, Redux Toolkit, Redux Saga, Dnd Kit, React Router, Axios',
+        backend: '',
+        embedded: '',
+
+        demo: '',
+        github: '',
+        githubBack: '',
+
+        description:
+            'Interactive monitoring and layout editor developed as part of a private personnel management platform. The module allows users to build and organize complex monitoring boards using drag-and-drop interactions.',
+
+        challenge:
+            'The main challenge was implementing a flexible grid-based editor where multiple types of elements could be created, moved, grouped and rearranged while preventing invalid placements and preserving complex relationships between layout entities.',
+
+        solution:
+            'I developed the Monitor module using React, TypeScript and Dnd Kit. I implemented custom drag-and-drop behavior, grid placement calculations, collision validation, drop previews, grouped element movement and dynamic layout updates. The module also supports connected position groups, counters, expandable elements and automatic layout adjustments when content changes.',
+
+        privateProject: true,
+
+        hasImages: true,
+        images: [
+            '/projects/personnel-management/preview.png',
         ],
     },
     {
@@ -215,34 +247,34 @@ export const WORK_ITEMS = [
         ],
     },
     {
-  id: 5,
-  area: 'back',
-  slug: 'operator-productivity-extension',
-  title: 'Operator Productivity Extension',
+        id: 5,
+        area: 'back',
+        slug: 'operator-productivity-extension',
+        title: 'Operator Productivity Extension',
 
-  frontend:
-    'React, TypeScript, Material UI, Chrome Extension API, Content Scripts, Background Scripts, Webpack',
-  backend: '',
-  embedded: '',
+        frontend:
+            'React, TypeScript, Material UI, Chrome Extension API, Content Scripts, Background Scripts, Webpack',
+        backend: '',
+        embedded: '',
 
-  demo: '',
-  github: 'https://github.com/veselhmelnik/Operator-Productivity-Extension',
-  githubBack: '',
+        demo: '',
+        github: 'https://github.com/veselhmelnik/Operator-Productivity-Extension',
+        githubBack: '',
 
-  description:
-    'Chrome Extension developed to automate repetitive project tracking tasks by extracting project data from an internal web application and exporting it directly to Google Sheets.',
+        description:
+            'Chrome Extension developed to automate repetitive project tracking tasks by extracting project data from an internal web application and exporting it directly to Google Sheets.',
 
-  challenge:
-    'Operators had to manually copy project information, calculate working durations, and update shared Google Sheets for every completed project. This repetitive workflow consumed time and increased the risk of data entry errors.',
+        challenge:
+            'Operators had to manually copy project information, calculate working durations, and update shared Google Sheets for every completed project. This repetitive workflow consumed time and increased the risk of data entry errors.',
 
-  solution:
-    'I developed a Chrome Extension that collects project information directly from the webpage, calculates required time metrics, and prepares the data for export to Google Sheets with a single click. The extension uses content scripts, background communication, persistent settings, and a React-based popup interface to automate the entire workflow.',
+        solution:
+            'I developed a Chrome Extension that collects project information directly from the webpage, calculates required time metrics, and prepares the data for export to Google Sheets with a single click. The extension uses content scripts, background communication, persistent settings, and a React-based popup interface to automate the entire workflow.',
 
-  hasImages: true,
-  images: [
-    '/projects/operator-productivity/preview.png',
-  ],
-}
+        hasImages: true,
+        images: [
+            '/projects/operator-productivity/preview.png',
+        ],
+    }
 ];
 
 export const SKILL_ITEMS = [

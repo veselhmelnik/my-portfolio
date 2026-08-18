@@ -18,7 +18,7 @@ const PortfolioPage = () => {
             let buttonName;
             switch (a) {
                 case 'front':
-                    buttonName = 'FrontEnd'
+                    buttonName = 'FullStack'
                     break;
                 case 'back':
                     buttonName = 'Extensions'
