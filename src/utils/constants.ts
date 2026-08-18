@@ -72,11 +72,11 @@ export const SOCIAL_ITEMS = [
 export const ABOUT_ITEMS = [
     {
         title: 'Real-World Projects',
-        count: '4+'
+        count: '6+'
     },
     {
         title: 'Focus Areas',
-        count: '2'
+        count: '3'
     },
     {
         title: 'Production IoT System',
@@ -85,6 +85,37 @@ export const ABOUT_ITEMS = [
 ]
 
 export const WORK_ITEMS = [
+    {
+        id: 6,
+        area: 'front',
+        slug: 'personnel-management-system',
+        title: 'Personnel Management System',
+
+        frontend:
+            'React 18, TypeScript, Material UI, Redux Toolkit, Redux Saga, Dnd Kit, React Router, Axios',
+        backend: '',
+        embedded: '',
+
+        demo: '',
+        github: '',
+        githubBack: '',
+
+        description:
+            'Interactive monitoring and layout editor developed as part of a private personnel management platform. The module allows users to build and organize complex monitoring boards using drag-and-drop interactions.',
+
+        challenge:
+            'The main challenge was implementing a flexible grid-based editor where multiple types of elements could be created, moved, grouped and rearranged while preventing invalid placements and preserving complex relationships between layout entities.',
+
+        solution:
+            'I developed the Monitor module using React, TypeScript and Dnd Kit. I implemented custom drag-and-drop behavior, grid placement calculations, collision validation, drop previews, grouped element movement and dynamic layout updates. The module also supports connected position groups, counters, expandable elements and automatic layout adjustments when content changes.',
+
+        privateProject: true,
+
+        hasImages: true,
+        images: [
+            '/projects/personnel-management/preview.png',
+        ],
+    },
     {
         id: 1,
         area: 'front',
@@ -150,37 +181,7 @@ export const WORK_ITEMS = [
             '/projects/ammunition/ammunition-order.png',
         ],
     },
-    {
-        id: 6,
-        area: 'front',
-        slug: 'personnel-management-system',
-        title: 'Personnel Management System',
-
-        frontend:
-            'React 18, TypeScript, Material UI, Redux Toolkit, Redux Saga, Dnd Kit, React Router, Axios',
-        backend: '',
-        embedded: '',
-
-        demo: '',
-        github: '',
-        githubBack: '',
-
-        description:
-            'Interactive monitoring and layout editor developed as part of a private personnel management platform. The module allows users to build and organize complex monitoring boards using drag-and-drop interactions.',
-
-        challenge:
-            'The main challenge was implementing a flexible grid-based editor where multiple types of elements could be created, moved, grouped and rearranged while preventing invalid placements and preserving complex relationships between layout entities.',
-
-        solution:
-            'I developed the Monitor module using React, TypeScript and Dnd Kit. I implemented custom drag-and-drop behavior, grid placement calculations, collision validation, drop previews, grouped element movement and dynamic layout updates. The module also supports connected position groups, counters, expandable elements and automatic layout adjustments when content changes.',
-
-        privateProject: true,
-
-        hasImages: true,
-        images: [
-            '/projects/personnel-management/preview.png',
-        ],
-    },
+    
     {
         id: 3,
         area: 'front',

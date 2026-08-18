@@ -38,7 +38,7 @@ const SingleProject = () => {
           privateProject={project.privateProject}
         />
       </div>
-      <div className="flex justify-between gap-5">
+      <div className="sm:flex justify-between gap-5">
         <div className="flex-1">
           <div className="text-lg font-bold">Description</div>
           <div className="text-[#525456]">{project.description}</div>

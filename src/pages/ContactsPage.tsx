@@ -30,7 +30,7 @@ const ContactsPage = () => {
                 <div>
                   <Icon size={40} />
                 </div>
-                <div className=" text-3xl">{c.name}</div>
+                <div className="text-xl md:text-3xl">{c.name}</div>
               </div>
               <div className="wrap-anywhere font-medium font-sans text-[#30302f]">
                 {contact}
