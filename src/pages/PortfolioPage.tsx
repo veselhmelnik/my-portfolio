@@ -21,20 +21,19 @@ const PortfolioPage = () => {
                     buttonName = 'FrontEnd'
                     break;
                 case 'back':
-                    buttonName = 'BackEnd'
+                    buttonName = 'Extensions'
                     break;
                 case 'embedded':
                     buttonName = 'Embedded'
                     break;
                 default:
-                    buttonName = 'ShowAll'
+                    buttonName = 'Show All'
                     break;
             }
             return (
                 <CustomButton key={buttonName} onClick={() => toggleArea(a)} isActive={area === a}>{buttonName}</CustomButton>    
             )
         })}
-
       </div>
       <div key={area} className='animate-fade-in'><WorkSection area={area}/></div>
     </div>

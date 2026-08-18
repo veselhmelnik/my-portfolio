@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTelegram, FaReact, FaNodeJs, FaWhatsapp  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram, FaReact, FaNodeJs, FaWhatsapp } from "react-icons/fa";
 import { BsStack, BsTypescript } from "react-icons/bs";
 import { FaMicrochip } from "react-icons/fa6";
 import { TbApi, TbHexagonLetterEFilled } from "react-icons/tb";
@@ -23,7 +23,7 @@ export const CONTACT_ITEMS = [
     {
         name: 'WhatsApp',
         contact: '+380671352816',
-        icon: FaWhatsapp 
+        icon: FaWhatsapp
     },
     {
         name: 'Telegram',
@@ -87,46 +87,162 @@ export const ABOUT_ITEMS = [
 export const WORK_ITEMS = [
     {
         id: 1,
-        title: "Project One",
-        image: "",
-        link: "#",
-        area: 'front'
+        area: 'front',
+        slug: "radio-initiators-system",
+        title: "Radio Initiators Control System",
+
+        frontend: "Next.js, Leaflet, Recharts and other",
+        backend: "Node.js, Express, MongoDB",
+        embedded: "ESP32, MQTT, LoRa",
+
+        demo: "https://demo-init-system-front.vercel.app/",
+        githubFront: 'https://github.com/veselhmelnik/demo-init-system-front',
+        githubBack: 'https://github.com/veselhmelnik/demo-init-system-back',
+
+
+        description:
+            "Full-stack control and monitoring platform for distributed embedded devices.",
+
+        challenge:
+            "The main challenge was reducing latency between the server and remote devices.",
+
+        solution:
+            "MQTT replaced HTTP polling and enabled event-driven communication.",
+        hasImages: true,
+        images: [
+            "/projects/radio/radio-preview.png",
+            "/projects/radio/radio-dashboard.png",
+            "/projects/radio/radio-admin.png",
+            "/projects/radio/radio-map.png",
+            "/projects/radio/radio-gps.png",
+        ],
     },
     {
         id: 2,
-        title: "Project Two",
-        image: "",
-        link: "#",
-        area: 'front'
+        area: 'front',
+        slug: 'ammunition-production-management-system',
+        title: 'Ammunition Production Management System',
+
+        frontend: 'React 19, TypeScript, Vite, React Router, TanStack Query, React Hook Form, Zod, Tailwind CSS, RSuite UI',
+        backend: 'Node.js, Express 5, MongoDB, Mongoose, JOSE (JWT), Google Authentication',
+        embedded: '',
+
+        demo: 'https://ammunition-production-management-system.onrender.com/',
+        github: 'https://github.com/veselhmelnik/Ammunition-Production-Management-System-demo',
+        githubBack: '',
+
+        description:
+            'Full-stack web application for managing ammunition production orders, inventory calculations and production planning.',
+
+        challenge:
+            'The main challenge was building a flexible system that could automate material calculations, aggregate requirements across multiple orders and support role-based workflows for production management.',
+
+        solution:
+            'I designed a modular full-stack system with automatic material calculation, inventory tracking, reporting and production planning tools. The application centralizes production workflows and reduces manual calculation errors.',
+        hasImages: true,
+        images: [
+            '/projects/ammunition/ammunition-preview.png',
+            '/projects/ammunition/ammunition-table.png',
+            '/projects/ammunition/ammunition-admin.png',
+            '/projects/ammunition/ammunition-ammo.png',
+            '/projects/ammunition/ammunition-calendar.png',
+            '/projects/ammunition/ammunition-order.png',
+        ],
     },
     {
         id: 3,
-        title: "Project Three",
-        image: "",
-        link: "#",
-        area: 'front'
+        area: 'front',
+        slug: 'internal-project-automation-platform',
+        title: 'Internal Project Automation Platform',
+
+        frontend:
+            'React, Vite, React Router, Ant Design, Axios',
+
+        backend:
+            'Node.js, Express, pdf-parse',
+
+        embedded: '',
+
+        demo: 'https://pdf-report-helper.onrender.com/',
+        github: '',
+        githubFront: 'https://github.com/veselhmelnik/Internal-Project-Automation-Platform-frontend',
+        githubBack: 'https://github.com/veselhmelnik/Internal-Project-Automation-Platform-backend',
+
+        description:
+            'Workflow automation platform that reduced repetitive project verification and document validation tasks for coordinators handling up to 1000 new projects per day.',
+
+        challenge:
+            'Project coordinators handled up to 1000 new projects per day and manually checked project ownership and Property Report documents, making the workflow slow and error-prone.',
+
+        solution:
+            'I automated both workflows by building batch project assignment processing and a PDF validation engine that detects missing, duplicated and incorrectly named rooms.',
+        hasImages: false,
+        images: [
+            '/projects/automation/preview.png',
+            '/projects/automation/assignment-checker.png',
+            '/projects/automation/pdf-validation.png',
+            '/projects/automation/validation-results.png',
+        ],
     },
     {
         id: 4,
-        title: "Project Four",
-        image: "",
-        link: "#",
-        area: 'back'
+        area: 'back',
+        slug: 'performance-optimizer-extension',
+        title: 'Performance Optimizer Extension',
+
+        frontend:
+            'TypeScript, JavaScript, Chrome Extension API, Manifest V3, Declarative Net Request API, Content Scripts',
+        backend: '',
+        embedded: '',
+
+        demo: 'https://chromewebstore.google.com/detail/request-blocker/jdieknojjmbimgjcjjcbpgphnjhkdlpg?authuser=0&hl=en',
+        github: 'https://github.com/veselhmelnik/performance-optimizer-extension',
+        githubBack: '',
+
+        description:
+            'Chrome Extension developed to optimize the performance of an internal web platform by blocking unnecessary network requests and removing unused interface elements.',
+
+        challenge:
+            'The main challenge was improving the performance of a large internal web application that loaded many unnecessary assets and interface sections on every page, slowing down operators during daily work.',
+
+        solution:
+            'I built a lightweight Chrome Extension that automatically blocks non-essential requests using Declarative Net Request and removes unnecessary DOM elements with content scripts. This reduced visual clutter, improved page responsiveness, and made the workflow faster without requiring any user configuration.',
+
+        hasImages: true,
+        images: [
+            '/projects/performance-optimizer/preview.png',
+            '/projects/performance-optimizer/1.png',
+        ],
     },
     {
-        id: 5,
-        title: "Project Four",
-        image: "",
-        link: "#",
-        area: 'back'
-    },
-    {
-        id: 6,
-        title: "Project Four",
-        image: "",
-        link: "#",
-        area: 'embedded'
-    },
+  id: 5,
+  area: 'back',
+  slug: 'operator-productivity-extension',
+  title: 'Operator Productivity Extension',
+
+  frontend:
+    'React, TypeScript, Material UI, Chrome Extension API, Content Scripts, Background Scripts, Webpack',
+  backend: '',
+  embedded: '',
+
+  demo: '',
+  github: 'https://github.com/veselhmelnik/Operator-Productivity-Extension',
+  githubBack: '',
+
+  description:
+    'Chrome Extension developed to automate repetitive project tracking tasks by extracting project data from an internal web application and exporting it directly to Google Sheets.',
+
+  challenge:
+    'Operators had to manually copy project information, calculate working durations, and update shared Google Sheets for every completed project. This repetitive workflow consumed time and increased the risk of data entry errors.',
+
+  solution:
+    'I developed a Chrome Extension that collects project information directly from the webpage, calculates required time metrics, and prepares the data for export to Google Sheets with a single click. The extension uses content scripts, background communication, persistent settings, and a React-based popup interface to automate the entire workflow.',
+
+  hasImages: true,
+  images: [
+    '/projects/operator-productivity/preview.png',
+  ],
+}
 ];
 
 export const SKILL_ITEMS = [

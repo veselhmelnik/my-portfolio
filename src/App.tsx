@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router'
 import MainPage from './pages/MainPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ContactsPage from './pages/ContactsPage'
+import SingleProject from './components/SingleProject'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:slug" element={<SingleProject />} />
           <Route path="/contacts" element={<ContactsPage />} />
         </Routes>
       </main>
