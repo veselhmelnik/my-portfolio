@@ -171,7 +171,7 @@ export const WORK_ITEMS = [
         solution:
             'I designed a modular full-stack system with automatic material calculation, inventory tracking, reporting and production planning tools. The application centralizes production workflows and reduces manual calculation errors.',
         hasImages: true,
-        privateProject: true,
+        
         images: [
             '/projects/ammunition/ammunition-preview.png',
             '/projects/ammunition/ammunition-table.png',
