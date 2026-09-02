@@ -142,6 +142,7 @@ export const WORK_ITEMS = [
         hasImages: true,
         images: [
             "/projects/radio/radio-preview.png",
+            "/projects/radio/radio-preview2.png",
             "/projects/radio/radio-dashboard.png",
             "/projects/radio/radio-admin.png",
             "/projects/radio/radio-map.png",
